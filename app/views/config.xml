@@ -1,0 +1,16 @@
+<Alloy>
+    <View id="mainView">
+        <View id="mainTopBar">
+            <View id="menuButton"/>
+        </View>
+        
+               <View>
+        <Module id="mapview" module="ti.map" method="createView" >
+            <!-- Starting with Alloy 1.4.0, use the Annotation tag to define an annotation -->
+            <!-- Prior to Alloy 1.4.0, create annotations in the controller -->
+            <Annotation id='appcHQ' myid='1' />
+        </Module>
+    </View>
+            
+    </View>
+</Alloy>
