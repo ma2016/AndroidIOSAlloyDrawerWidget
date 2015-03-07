@@ -37,12 +37,12 @@ function Controller() {
         id: "menuTopBar"
     });
     $.__views.menuView.add($.__views.menuTopBar);
-    var __alloyId5 = [];
+    var __alloyId3 = [];
     $.__views.row1 = Ti.UI.createTableViewRow({
         height: "50dp",
         id: "row1"
     });
-    __alloyId5.push($.__views.row1);
+    __alloyId3.push($.__views.row1);
     $.__views.rowContainer = Ti.UI.createView({
         height: "30dp",
         layout: "horizontal",
@@ -74,7 +74,7 @@ function Controller() {
         height: "50dp",
         id: "row2"
     });
-    __alloyId5.push($.__views.row2);
+    __alloyId3.push($.__views.row2);
     $.__views.rowContainer = Ti.UI.createView({
         height: "30dp",
         layout: "horizontal",
@@ -106,7 +106,7 @@ function Controller() {
         separatorStyle: "NONE",
         separatorColor: "transparent",
         backgroundColor: "#F2F2F2",
-        data: __alloyId5,
+        data: __alloyId3,
         id: "menuTable"
     });
     $.__views.menuView.add($.__views.menuTable);

@@ -43,16 +43,11 @@ function Controller() {
         id: "menuButton"
     });
     $.__views.mainTopBar.add($.__views.menuButton);
+    $.__views.__alloyId0 = Ti.UI.createView({
+        id: "__alloyId0"
+    });
+    $.__views.mainView.add($.__views.__alloyId0);
     var __alloyId1 = [];
-    $.__views.row = Ti.UI.createTableViewRow({
-        id: "row"
-    });
-    __alloyId1.push($.__views.row);
-    $.__views.__alloyId2 = Ti.UI.createView({
-        id: "__alloyId2"
-    });
-    $.__views.row.add($.__views.__alloyId2);
-    var __alloyId3 = [];
     $.__views.appcHQ = require("ti.map").createAnnotation({
         latitude: 37.390749,
         longitude: -122.081651,
@@ -62,7 +57,7 @@ function Controller() {
         id: "appcHQ",
         myid: "1"
     });
-    __alloyId3.push($.__views.appcHQ);
+    __alloyId1.push($.__views.appcHQ);
     $.__views.mapview = require("ti.map").createView({
         region: {
             latitude: 33.74511,
@@ -70,16 +65,24 @@ function Controller() {
             latitudeDelta: .01,
             longitudeDelta: .01
         },
-        height: "100%",
-        annotations: __alloyId3,
+        annotations: __alloyId1,
         id: "mapview"
     });
-    $.__views.__alloyId2.add($.__views.mapview);
-    $.__views.__alloyId0 = Ti.UI.createTableView({
-        data: __alloyId1,
-        id: "__alloyId0"
+    $.__views.__alloyId0.add($.__views.mapview);
+    $.__views.textField = Ti.UI.createTextField({
+        id: "textField",
+        borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+        hintText: "Search",
+        color: "#336699",
+        backgroundColor: "white",
+        borderRadius: "3",
+        top: "5%",
+        left: "10%",
+        right: "10%",
+        width: "80%",
+        height: "10%"
     });
-    $.__views.mainView.add($.__views.__alloyId0);
+    $.__views.__alloyId0.add($.__views.textField);
     exports.destroy = function() {};
     _.extend($, $.__views);
     _.extend($, exports);

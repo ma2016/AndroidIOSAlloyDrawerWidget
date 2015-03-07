@@ -43,10 +43,10 @@ function Controller() {
         id: "menuButton"
     });
     $.__views.mainTopBar.add($.__views.menuButton);
-    $.__views.__alloyId4 = Ti.UI.createTableView({
-        id: "__alloyId4"
+    $.__views.__alloyId2 = Ti.UI.createTableView({
+        id: "__alloyId2"
     });
-    $.__views.mainView.add($.__views.__alloyId4);
+    $.__views.mainView.add($.__views.__alloyId2);
     exports.destroy = function() {};
     _.extend($, $.__views);
     _.extend($, exports);
